@@ -26,7 +26,9 @@ a {
 /* h1 property globally */
 h1{
     font-size: 40px;
-    margin: 0PX;}
+    margin: 0PX;
+    color: #00815d;
+}
 
 /* h3 property globally */
 h3{
@@ -41,7 +43,9 @@ p{
     padding: 0px;
     margin: 0px;
     font-size: 18px;
-    text-decoration: none;}
+    text-decoration: none;
+        color: #00815d;
+}
 
 /* navbar */
 nav {
@@ -826,7 +830,7 @@ form .btn
 
     .p-link
     {
-        height: 73vh;
+        height: 60vh !important;
     }
 
     .p-link p
