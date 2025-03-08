@@ -347,7 +347,6 @@ video
 .p-link p:hover
 {
     color: #00b884;
-    font-size: 18px;
     transform: scale(1.005);
     transition: .2s ease-in-out;
 }
@@ -828,6 +827,13 @@ form .btn
         padding: 20px 30px;
     }    
 
+    .detail
+    {
+        margin-right: 0px !important;
+        width: 400px !important;
+        font-size: 16px !important;
+    }
+
     .p-link
     {
         height: 60vh !important;
@@ -838,13 +844,6 @@ form .btn
         font-size: 16px;
     }
 
-
-    .detail
-    {
-        margin-right: 0px !important;
-        width: 400px !important;
-        font-size: 16px !important;
-    }
 
     #second
     {
