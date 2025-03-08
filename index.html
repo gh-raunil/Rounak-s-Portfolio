@@ -176,16 +176,6 @@
         }
         prevScrollPos = currentScrollPos;
     };
-
-
-        $(document).ready(function () 
-        {
-          $(".faq-question").click(function () 
-          {
-            $(this).toggleClass("active");
-            $(this).next(".faq-answer").slideToggle(300);
-          });
-        });
         function toggleMenu() {
           const menu = document.querySelector(".mobile-menu");
           menu.classList.toggle("active");
