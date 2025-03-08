@@ -242,6 +242,12 @@ font-size: 1.2rem;}
     transition: .2s ease-in-out;
 }
 
+.detail p:not(:hover)
+{
+    transition: .2s ease-in-out;
+}
+
+
 /* third */
 
 .thirdSection
@@ -469,8 +475,21 @@ form .btn
     }
     .p-link
     {
-        height: 85vh;
+        height: 70vh !important;
     }
+
+    .p-link p:hover
+    {
+        transform: scale(1.01);
+    }
+
+    .p-link p:not(:hover)
+    {
+        transform: scale(1);
+        transition: .2s ease-in-out;
+    }
+
+
     .copyright
     {
         padding: 5px;
@@ -730,9 +749,14 @@ form .btn
         padding: 20px 30px;
     }    
 
+    .p-link
+    {
+        height: 64vh;
+    }
+
     .p-link p
     {
-        font-size: 16px;
+        font-size: 10px;
     }
 
 
