@@ -44,7 +44,14 @@ p{
     margin: 0px;
     font-size: 18px;
     text-decoration: none;
-        color: #00815d;
+    color: #00815d;
+}
+
+/* Selection style */
+::selection
+{
+    color: #00ffb7;
+    background-color: #005B41;
 }
 
 /* navbar */
