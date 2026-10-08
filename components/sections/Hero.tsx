@@ -128,7 +128,7 @@ export default function Hero() {
                 PRIMARY STACK
               </span>
               <span className="text-[var(--text-primary)] font-medium text-xs">
-                Next.js · Node · Postgres
+                Next.js · Node · MongoDB
               </span>
             </div>
             <div className="space-y-0.5">
@@ -144,7 +144,7 @@ export default function Hero() {
                 LOCATION
               </span>
               <span className="text-[var(--text-primary)] font-medium text-xs">
-                Vellore / Tamilnadu
+                Vellore / Tamil Nadu
               </span>
             </div>
             <div className="space-y-0.5">
