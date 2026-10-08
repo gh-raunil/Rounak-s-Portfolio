@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       aria-label="Introduction & Overview"
-      className="relative pt-6 sm:pt-8 lg:pt-9 pb-6 sm:pb-8 lg:pb-8 border-b border-[var(--border-subtle)] overflow-hidden lg:min-h-[460px] xl:min-h-[490px]"
+      className="relative pt-6 sm:pt-8 lg:pt-10 pb-6 sm:pb-8 lg:pb-10 border-b border-[var(--border-subtle)] overflow-hidden min-h-[440px] sm:min-h-[480px] md:min-h-[500px] lg:min-h-[520px] xl:min-h-[550px]"
     >
       {/* Layer 2: Subtle Studio Environmental Lighting (Warm Red from Left, Cool Blue from Right) */}
       <div
@@ -26,25 +26,40 @@ export default function Hero() {
         />
       </div>
 
-      {/* Layer 3: Desktop Large Transparent Portrait Cutout (Approved Desktop Composition: Behind/Within Hero Right) */}
+      {/* Layer 3a: Mobile Absolute Portrait Watermark (Phones < 640px: Positioned gracefully at top-right beside hero title) */}
       <div
         aria-hidden="true"
-        className="hidden lg:flex pointer-events-none select-none absolute right-[-15px] lg:right-[-6px] xl:right-2 bottom-0 z-[1] items-end justify-end"
+        className="sm:hidden pointer-events-none select-none absolute -right-6 top-6 w-[210px] aspect-[1221/1289] z-0 opacity-40 dark:opacity-45 [mask-image:linear-gradient(to_bottom,black_60%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_98%)]"
       >
-        <div className="relative w-[400px] xl:w-[450px] aspect-[1162/1353] [mask-image:linear-gradient(to_bottom,black_84%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_84%,transparent_100%)]">
+        <Image
+          src="/Professional_Portrait_Cutout.png"
+          alt="Rounak Kumar — Full-Stack Developer portrait"
+          fill
+          priority
+          sizes="210px"
+          className="object-contain object-top"
+        />
+      </div>
+
+      {/* Layer 3b: Tablet & Desktop Absolute Portrait (Tablets ≥ 640px & Desktop: Grounded at bottom-right, perfectly proportioned) */}
+      <div
+        aria-hidden="true"
+        className="hidden sm:flex pointer-events-none select-none absolute right-[-10px] md:right-0 lg:right-[-6px] xl:right-2 bottom-0 z-0 items-end justify-end"
+      >
+        <div className="relative w-[320px] md:w-[380px] lg:w-[460px] xl:w-[500px] aspect-[1221/1289] opacity-80 md:opacity-95 lg:opacity-100 transition-opacity [mask-image:linear-gradient(to_bottom,black_84%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_84%,transparent_100%)]">
           <Image
-            src="/Image_no_bg.png"
+            src="/Professional_Portrait_Cutout.png"
             alt="Rounak Kumar — Full-Stack Developer portrait"
             fill
             priority
-            sizes="450px"
+            sizes="(max-width: 768px) 320px, (max-width: 1024px) 380px, 500px"
             className="object-contain object-bottom"
           />
         </div>
       </div>
 
       {/* Layer 4: Foreground Hero Content & Interactive Elements */}
-      <div className="relative z-10 max-w-xl lg:max-w-[460px] xl:max-w-[510px]">
+      <div className="relative z-10 max-w-xl sm:max-w-[380px] md:max-w-[420px] lg:max-w-[460px] xl:max-w-[510px]">
         {/* Credential Status (wraps naturally on narrow viewports) */}
         <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2.5 sm:mb-3">
           <span className="font-mono text-xs font-medium text-[var(--accent)]">
@@ -105,23 +120,8 @@ export default function Hero() {
           </Link>
         </div>
 
-        {/* Layer 3-Mobile: Unobstructed Mobile Portrait (Flows naturally between CTAs and Specs on mobile viewports) */}
-        <div
-          aria-hidden="true"
-          className="lg:hidden relative z-[1] mx-auto my-4 sm:my-6 w-[230px] sm:w-[280px] aspect-[1162/1353] [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] pointer-events-none select-none"
-        >
-          <Image
-            src="/Image_no_bg.png"
-            alt="Rounak Kumar — Full-Stack Developer portrait"
-            fill
-            priority
-            sizes="(max-width: 640px) 230px, 280px"
-            className="object-contain object-bottom"
-          />
-        </div>
-
         {/* Quick Technical Specs Grid (Compact 2x2 telemetry, perfectly grounds vacant space, zero portrait overlap) */}
-        <div className="relative pt-4 sm:pt-4.5 border-t border-[var(--border-subtle)] max-w-xl lg:max-w-[420px] xl:max-w-[460px]">
+        <div className="relative pt-4 sm:pt-4.5 border-t border-[var(--border-subtle)] max-w-xl sm:max-w-[380px] md:max-w-[420px] lg:max-w-[420px] xl:max-w-[460px]">
           <div className="grid grid-cols-2 gap-x-5 gap-y-3 sm:gap-x-6 sm:gap-y-3 text-xs font-mono">
             <div className="space-y-0.5">
               <span className="text-[var(--text-muted)] block text-[10px] sm:text-[11px] tracking-wider uppercase">
@@ -144,7 +144,7 @@ export default function Hero() {
                 LOCATION
               </span>
               <span className="text-[var(--text-primary)] font-medium text-xs">
-                Vellore / New Delhi
+                Vellore / Tamilnadu
               </span>
             </div>
             <div className="space-y-0.5">
