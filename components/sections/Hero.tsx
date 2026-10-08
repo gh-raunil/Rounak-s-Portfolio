@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       aria-label="Introduction & Overview"
-      className="relative pt-6 sm:pt-8 lg:pt-10 pb-12 sm:pb-16 lg:pb-20 border-b border-[var(--border-subtle)] overflow-hidden lg:min-h-[580px] xl:min-h-[640px]"
+      className="relative pt-6 sm:pt-8 lg:pt-9 pb-6 sm:pb-8 lg:pb-8 border-b border-[var(--border-subtle)] overflow-hidden lg:min-h-[460px] xl:min-h-[490px]"
     >
       {/* Layer 2: Subtle Studio Environmental Lighting (Warm Red from Left, Cool Blue from Right) */}
       <div
@@ -29,24 +29,24 @@ export default function Hero() {
       {/* Layer 3: Desktop Large Transparent Portrait Cutout (Approved Desktop Composition: Behind/Within Hero Right) */}
       <div
         aria-hidden="true"
-        className="hidden lg:flex pointer-events-none select-none absolute right-[-10px] lg:right-2 xl:right-6 bottom-0 z-[1] items-end justify-end"
+        className="hidden lg:flex pointer-events-none select-none absolute right-[-15px] lg:right-[-6px] xl:right-2 bottom-0 z-[1] items-end justify-end"
       >
-        <div className="relative w-[460px] xl:w-[520px] aspect-[1162/1353] [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]">
+        <div className="relative w-[400px] xl:w-[450px] aspect-[1162/1353] [mask-image:linear-gradient(to_bottom,black_84%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_84%,transparent_100%)]">
           <Image
             src="/Image_no_bg.png"
             alt="Rounak Kumar — Full-Stack Developer portrait"
             fill
             priority
-            sizes="520px"
+            sizes="450px"
             className="object-contain object-bottom"
           />
         </div>
       </div>
 
       {/* Layer 4: Foreground Hero Content & Interactive Elements */}
-      <div className="relative z-10 max-w-xl lg:max-w-2xl flex flex-col justify-center">
+      <div className="relative z-10 max-w-xl lg:max-w-[460px] xl:max-w-[510px]">
         {/* Credential Status (wraps naturally on narrow viewports) */}
-        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2.5 sm:mb-3">
           <span className="font-mono text-xs font-medium text-[var(--accent)]">
             BCA — VIT Vellore
           </span>
@@ -57,26 +57,26 @@ export default function Hero() {
         </div>
 
         {/* Primary Name & Role */}
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--text-primary)] leading-[1.1] mb-2">
+        <h1 className="text-3xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-[var(--text-primary)] leading-[1.1] mb-1.5">
           {siteConfig.name}
         </h1>
-        <p className="font-mono text-xs sm:text-sm md:text-base tracking-wider text-[var(--text-muted)] uppercase mb-4 sm:mb-6">
+        <p className="font-mono text-xs sm:text-sm md:text-base tracking-wider text-[var(--text-muted)] uppercase mb-3.5 sm:mb-4">
           {siteConfig.title}
         </p>
 
         {/* Core Technical Statement (Intentional clean 2-line break on mobile) */}
-        <p className="text-lg sm:text-xl text-[var(--text-primary)] font-medium leading-snug mb-3 sm:mb-4 max-w-xl [text-wrap:balance]">
+        <p className="text-base sm:text-lg lg:text-xl text-[var(--text-primary)] font-medium leading-snug mb-2.5 sm:mb-3 max-w-lg [text-wrap:balance]">
           <span className="block sm:inline">Building modern web applications </span>
           <span className="block sm:inline">from interface to backend.</span>
         </p>
 
         {/* Supporting description */}
-        <p className="text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed mb-6 sm:mb-8 max-w-xl">
+        <p className="text-xs sm:text-sm lg:text-[15px] text-[var(--text-secondary)] leading-relaxed mb-5 sm:mb-6 max-w-lg">
           Designing and engineering production-ready web systems — combining clean, accessible frontend architectures with resilient API services, transactional databases, and verified tenant isolation.
         </p>
 
         {/* Call to Actions */}
-        <div className="relative z-20 flex flex-wrap items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+        <div className="relative z-20 flex flex-wrap items-center gap-2.5 sm:gap-3.5 mb-5 sm:mb-6">
           <Button
             href="/projects"
             variant="primary"
@@ -120,35 +120,42 @@ export default function Hero() {
           />
         </div>
 
-        {/* Quick Technical Specs Row (Part 17: Clean spacing, no giant boxes, responsive layout) */}
-        <div className="relative pt-6 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 text-xs font-mono max-w-xl lg:max-w-2xl">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute top-0 left-0 right-0 sm:right-24 h-px bg-gradient-to-r from-[var(--border-subtle)] via-[var(--border-subtle)]/70 to-transparent"
-          />
-          <div className="space-y-0.5">
-            <span className="text-[var(--text-muted)] block text-[10px] sm:text-[11px] tracking-wider uppercase">
-              PRIMARY STACK
-            </span>
-            <span className="text-[var(--text-primary)] font-medium text-xs">
-              Next.js · Node.js · PostgreSQL
-            </span>
-          </div>
-          <div className="space-y-0.5">
-            <span className="text-[var(--text-muted)] block text-[10px] sm:text-[11px] tracking-wider uppercase">
-              CORE FOCUS
-            </span>
-            <span className="text-[var(--text-primary)] font-medium text-xs">
-              Multi-Tenant Systems & APIs
-            </span>
-          </div>
-          <div className="space-y-0.5">
-            <span className="text-[var(--text-muted)] block text-[10px] sm:text-[11px] tracking-wider uppercase">
-              LOCATION
-            </span>
-            <span className="text-[var(--text-primary)] font-medium text-xs">
-              Vellore / New Delhi, IN
-            </span>
+        {/* Quick Technical Specs Grid (Compact 2x2 telemetry, perfectly grounds vacant space, zero portrait overlap) */}
+        <div className="relative pt-4 sm:pt-4.5 border-t border-[var(--border-subtle)] max-w-xl lg:max-w-[420px] xl:max-w-[460px]">
+          <div className="grid grid-cols-2 gap-x-5 gap-y-3 sm:gap-x-6 sm:gap-y-3 text-xs font-mono">
+            <div className="space-y-0.5">
+              <span className="text-[var(--text-muted)] block text-[10px] sm:text-[11px] tracking-wider uppercase">
+                PRIMARY STACK
+              </span>
+              <span className="text-[var(--text-primary)] font-medium text-xs">
+                Next.js · Node · Postgres
+              </span>
+            </div>
+            <div className="space-y-0.5">
+              <span className="text-[var(--text-muted)] block text-[10px] sm:text-[11px] tracking-wider uppercase">
+                CORE FOCUS
+              </span>
+              <span className="text-[var(--text-primary)] font-medium text-xs">
+                Multi-Tenant Systems
+              </span>
+            </div>
+            <div className="space-y-0.5">
+              <span className="text-[var(--text-muted)] block text-[10px] sm:text-[11px] tracking-wider uppercase">
+                LOCATION
+              </span>
+              <span className="text-[var(--text-primary)] font-medium text-xs">
+                Vellore / New Delhi
+              </span>
+            </div>
+            <div className="space-y-0.5">
+              <span className="text-[var(--text-muted)] block text-[10px] sm:text-[11px] tracking-wider uppercase">
+                STATUS
+              </span>
+              <span className="text-[var(--text-primary)] font-medium text-xs flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                <span>Open for Roles</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
