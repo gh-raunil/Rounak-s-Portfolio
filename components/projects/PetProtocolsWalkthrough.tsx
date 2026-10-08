@@ -128,9 +128,9 @@ export default function PetProtocolsWalkthrough() {
         </div>
       </div>
 
-      {/* Step Selector Tabs */}
-      <div className="flex items-center justify-between gap-2 overflow-x-auto pb-1 scrollbar-none">
-        <div className="flex items-center gap-1.5 sm:gap-2">
+      {/* Step Selector Tabs & Navigation Controls */}
+      <div className="flex items-center justify-between gap-2.5">
+        <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 scrollbar-none flex-1 min-w-0">
           {STEPS.map((step, idx) => {
             const isActive = idx === activeStepIndex;
             return (
@@ -138,7 +138,7 @@ export default function PetProtocolsWalkthrough() {
                 key={step.id}
                 type="button"
                 onClick={() => setActiveStepIndex(idx)}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer whitespace-nowrap ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                   isActive
                     ? "bg-[var(--accent)] text-white font-medium shadow-sm"
                     : "bg-[var(--bg-subtle)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--card-hover)] border border-[var(--border-subtle)]"
@@ -159,7 +159,7 @@ export default function PetProtocolsWalkthrough() {
         </div>
 
         {/* Previous / Next Controls */}
-        <div className="flex items-center gap-1 shrink-0 ml-2">
+        <div className="flex items-center gap-1 shrink-0">
           <button
             type="button"
             onClick={handlePrev}

@@ -14,7 +14,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
       {/* Main Content Area */}
       <div className="lg:pl-64 xl:pl-72 flex-1 flex flex-col transition-all">
-        <main className="flex-1 w-full max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 pt-20 sm:pt-24 lg:pt-14 pb-16">
+        <main className="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 pt-20 sm:pt-24 lg:pt-14 pb-16">
           {children}
         </main>
         <Footer />
