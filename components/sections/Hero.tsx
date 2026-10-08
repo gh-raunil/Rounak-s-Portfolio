@@ -8,38 +8,42 @@ export default function Hero() {
   return (
     <section
       aria-label="Introduction & Overview"
-      className="relative pt-6 sm:pt-10 lg:pt-14 pb-12 sm:pb-16 lg:pb-20 border-b border-[var(--border-subtle)] overflow-hidden"
+      className="relative pt-6 sm:pt-10 lg:pt-14 pb-12 sm:pb-16 lg:pb-20 border-b border-[var(--border-subtle)] overflow-hidden lg:min-h-[580px] xl:min-h-[640px]"
     >
-      {/* Layer 1 & 2: Background Ambient Depth (Theme-Aware Environment) */}
+      {/* Layer 2: Subtle Studio Environmental Lighting (Warm Red from Left, Cool Blue from Right) */}
       <div
         aria-hidden="true"
-        className="pointer-events-none select-none absolute right-[5%] sm:right-[12%] top-[6%] w-[280px] sm:w-[460px] h-[280px] sm:h-[460px] rounded-full bg-[var(--accent)]/5 dark:bg-[var(--accent)]/8 blur-3xl -z-10"
-      />
-
-      {/* Layer 3: Large Transparent Portrait Cutout (Integrated Hero Canvas Layer) */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute right-[-10px] sm:right-[-5px] md:right-0 lg:right-[-1%] xl:right-2 bottom-0 top-auto z-0 flex items-end justify-end"
+        className="pointer-events-none select-none absolute inset-0 -z-10 overflow-hidden"
       >
-        <div className="relative w-[270px] sm:w-[350px] md:w-[430px] lg:w-[520px] xl:w-[600px] 2xl:w-[660px] aspect-[1162/1353] [mask-image:linear-gradient(to_bottom,black_75%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_75%,transparent_98%)]">
+        {/* Left Warm / Red Studio Light — Soft diffused crimson wash illuminating from the left */}
+        <div
+          className="absolute -left-[20%] sm:-left-[12%] lg:left-[0%] top-[15%] sm:top-[12%] w-[280px] sm:w-[440px] lg:w-[620px] h-[280px] sm:h-[440px] lg:h-[620px] rounded-full bg-[radial-gradient(circle,rgba(225,29,72,0.04)_0%,rgba(225,29,72,0.015)_45%,transparent_75%)] dark:bg-[radial-gradient(circle,rgba(225,29,72,0.10)_0%,rgba(225,29,72,0.03)_50%,transparent_75%)] blur-[60px] sm:blur-[90px] lg:blur-[120px]"
+        />
+
+        {/* Right Cool / Blue Studio Light — Soft diffused blue wash illuminating from the right */}
+        <div
+          className="absolute -right-[15%] sm:-right-[8%] lg:right-[-2%] top-[10%] sm:top-[6%] w-[300px] sm:w-[460px] lg:w-[640px] h-[300px] sm:h-[460px] lg:h-[640px] rounded-full bg-[radial-gradient(circle,rgba(37,99,235,0.045)_0%,rgba(37,99,235,0.016)_45%,transparent_75%)] dark:bg-[radial-gradient(circle,rgba(37,99,235,0.12)_0%,rgba(37,99,235,0.035)_50%,transparent_75%)] blur-[60px] sm:blur-[90px] lg:blur-[120px]"
+        />
+      </div>
+
+      {/* Layer 3: Large Transparent Portrait Cutout (Integrated Hero Canvas Layer, Sized to Prevent Cropping) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute right-[-10px] sm:right-0 lg:right-2 xl:right-6 bottom-0 z-[1] flex items-end justify-end"
+      >
+        <div className="relative w-[240px] sm:w-[310px] md:w-[380px] lg:w-[460px] xl:w-[520px] aspect-[1162/1353] [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]">
           <Image
             src="/Image_no_bg.png"
-            alt="Rounak Kumar — Full-Stack Developer portrait cutout"
+            alt="Rounak Kumar — Full-Stack Developer portrait"
             fill
             priority
-            sizes="(max-width: 640px) 280px, (max-width: 768px) 430px, (max-width: 1024px) 520px, 660px"
-            className="object-contain object-bottom filter drop-shadow-[0_16px_36px_rgba(0,0,0,0.1)] dark:drop-shadow-[0_24px_50px_rgba(0,0,0,0.55)]"
+            sizes="(max-width: 640px) 240px, (max-width: 768px) 380px, (max-width: 1024px) 460px, 520px"
+            className="object-contain object-bottom"
           />
         </div>
       </div>
 
-      {/* Layer 4: Soft Directional Readability Wash (Guarantees Text Legibility Across Themes) */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute inset-y-0 left-0 w-full sm:w-[85%] md:w-[75%] lg:w-[65%] z-[5] bg-gradient-to-r from-[var(--bg-primary)] via-[var(--bg-primary)]/85 to-transparent"
-      />
-
-      {/* Layer 5: Foreground Hero Content & Interactive Elements */}
+      {/* Layer 4: Foreground Hero Content & Interactive Elements */}
       <div className="relative z-10 max-w-xl lg:max-w-2xl flex flex-col justify-center">
         {/* Credential Status */}
         <div className="flex flex-wrap items-center gap-3 mb-4">
