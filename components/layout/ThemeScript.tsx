@@ -6,7 +6,9 @@ export default function ThemeScript() {
           (function() {
             try {
               var stored = localStorage.getItem('theme');
-              var theme = stored;
+              var params = new URLSearchParams(window.location.search);
+              var queryTheme = params.get('theme');
+              var theme = (queryTheme === 'light' || queryTheme === 'dark') ? queryTheme : stored;
               if (!theme) {
                 var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
                 theme = prefersLight ? 'light' : 'dark';

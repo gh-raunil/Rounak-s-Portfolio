@@ -78,7 +78,7 @@ export default function MobileNav() {
       {/* Slide-out Drawer */}
       <aside
         className={`fixed top-0 bottom-0 right-0 w-[82%] max-w-sm bg-[var(--sidebar-bg)] border-l border-[var(--sidebar-border)] p-6 z-50 flex flex-col justify-between transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+          isOpen ? "translate-x-0" : "translate-x-full invisible pointer-events-none"
         }`}
         aria-label="Mobile Navigation Menu"
       >
