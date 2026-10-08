@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { siteConfig } from "@/data/siteConfig";
 import Button from "@/components/ui/Button";
 import { ArrowRight, Download, Mail } from "lucide-react";
@@ -29,15 +28,15 @@ export default function Hero() {
       {/* Layer 3: Large Transparent Portrait Cutout (Integrated Hero Canvas Layer, Sized to Prevent Cropping) */}
       <div
         aria-hidden="true"
-        className="pointer-events-none select-none absolute right-[-10px] sm:right-0 lg:right-2 xl:right-6 bottom-0 z-[1] flex items-end justify-end"
+        className="pointer-events-none select-none absolute right-[-12px] sm:right-0 lg:right-2 xl:right-6 -bottom-1 sm:bottom-0 z-[1] flex items-end justify-end opacity-40 sm:opacity-90 lg:opacity-100 transition-opacity"
       >
-        <div className="relative w-[240px] sm:w-[310px] md:w-[380px] lg:w-[460px] xl:w-[520px] aspect-[1162/1353] [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]">
+        <div className="relative w-[210px] sm:w-[310px] md:w-[380px] lg:w-[460px] xl:w-[520px] aspect-[1162/1353] [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]">
           <Image
             src="/Image_no_bg.png"
             alt="Rounak Kumar — Full-Stack Developer portrait"
             fill
             priority
-            sizes="(max-width: 640px) 240px, (max-width: 768px) 380px, (max-width: 1024px) 460px, 520px"
+            sizes="(max-width: 640px) 210px, (max-width: 768px) 380px, (max-width: 1024px) 460px, 520px"
             className="object-contain object-bottom"
           />
         </div>
@@ -74,7 +73,7 @@ export default function Hero() {
         </p>
 
         {/* Call to Actions */}
-        <div className="relative z-20 flex flex-wrap items-center gap-3 sm:gap-4 mb-8">
+        <div className="relative z-20 flex flex-wrap items-center gap-3 sm:gap-4">
           <Button
             href="/projects"
             variant="primary"
@@ -85,42 +84,23 @@ export default function Hero() {
           </Button>
 
           <Button
+            href="/contact"
+            variant="secondary"
+            size="md"
+            icon={<Mail className="w-4 h-4" />}
+          >
+            Get in Touch
+          </Button>
+
+          <Button
             href={siteConfig.resumePdfUrl}
             download="Rounak_Kumar_Resume.pdf"
-            variant="secondary"
+            variant="outline"
             size="md"
             icon={<Download className="w-4 h-4" />}
           >
             Download Resume
           </Button>
-
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-mono rounded-md bg-[var(--bg-subtle)]/80 hover:bg-[var(--bg-subtle)] border border-[var(--border-subtle)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors shadow-xs"
-          >
-            <Mail className="w-3.5 h-3.5" />
-            <span>Get in touch</span>
-          </Link>
-        </div>
-
-        {/* Quick Technical Specs Row */}
-        <div className="relative pt-6 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 text-xs font-mono max-w-xl lg:max-w-2xl">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute top-0 left-0 right-0 sm:right-24 h-px bg-gradient-to-r from-[var(--border-subtle)] via-[var(--border-subtle)]/70 to-transparent"
-          />
-          <div>
-            <span className="text-[var(--text-muted)] block text-[11px]">PRIMARY STACK</span>
-            <span className="text-[var(--text-primary)] font-medium">Next.js • Node.js • Postgres</span>
-          </div>
-          <div>
-            <span className="text-[var(--text-muted)] block text-[11px]">CORE FOCUS</span>
-            <span className="text-[var(--text-primary)] font-medium">Multi-Tenant Systems & APIs</span>
-          </div>
-          <div>
-            <span className="text-[var(--text-muted)] block text-[11px]">LOCATION</span>
-            <span className="text-[var(--text-primary)] font-medium">Vellore / New Delhi, IN</span>
-          </div>
         </div>
       </div>
     </section>

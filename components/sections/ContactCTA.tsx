@@ -9,7 +9,7 @@ export default function ContactCTA() {
     <section aria-label="Direct Communication & Collaboration" className="pt-14 sm:pt-18 pb-8">
       <SectionHeader
         tag="Contact"
-        title="Let's build something."
+        title="Get in Touch"
         description="Available for full-stack engineering roles, software development opportunities, and technical collaborations."
       />
 

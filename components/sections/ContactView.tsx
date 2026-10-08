@@ -94,7 +94,7 @@ export default function ContactView() {
     <div className="space-y-10">
       <SectionHeader
         tag="Contact"
-        title="Let's build something."
+        title="Direct Communication & Contact"
         description="Reach out directly for software engineering opportunities, technical collaborations, or system architecture inquiries."
       />
 
