@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       aria-label="Introduction & Overview"
-      className="relative pt-6 sm:pt-8 lg:pt-10 pb-6 sm:pb-8 lg:pb-10 border-b border-[var(--border-subtle)] overflow-hidden min-h-[440px] sm:min-h-[480px] md:min-h-[500px] lg:min-h-[520px] xl:min-h-[550px]"
+      className="relative pt-6 sm:pt-8 md:pt-0 lg:pt-0 pb-6 sm:pb-8 lg:pb-10 border-b border-[var(--border-subtle)] overflow-hidden min-h-[440px] sm:min-h-[480px] md:min-h-[500px] lg:min-h-[520px] xl:min-h-[550px]"
     >
       {/* Layer 2: Subtle Studio Environmental Lighting (Warm Red from Left, Cool Blue from Right) */}
       <div
@@ -29,7 +29,7 @@ export default function Hero() {
       {/* Layer 3a: Mobile Absolute Portrait Watermark (Phones < 640px: Positioned gracefully at top-right beside hero title) */}
       <div
         aria-hidden="true"
-        className="sm:hidden pointer-events-none select-none absolute -right-6 top-6 w-[210px] aspect-[1221/1289] z-0 opacity-40 dark:opacity-45 [mask-image:linear-gradient(to_bottom,black_60%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_98%)]"
+        className="sm:hidden pointer-events-none select-none absolute -right-10 top-6 w-[320px] aspect-[1221/1289] z-0 opacity-40 dark:opacity-75 [mask-image:linear-gradient(to_bottom,black_60%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_98%)]"
       >
         <Image
           src="/Professional_Portrait_Cutout.png"
@@ -44,9 +44,9 @@ export default function Hero() {
       {/* Layer 3b: Tablet & Desktop Absolute Portrait (Tablets ≥ 640px & Desktop: Grounded at bottom-right, perfectly proportioned) */}
       <div
         aria-hidden="true"
-        className="hidden sm:flex pointer-events-none select-none absolute right-[-10px] md:right-0 lg:right-[-6px] xl:right-2 bottom-0 z-0 items-end justify-end"
+        className="hidden sm:flex pointer-events-none select-none absolute right-[-10px] md:right-32px lg:right-[-50px] xl:-right-12 bottom-0 z-0 items-end justify-end"
       >
-        <div className="relative w-[320px] md:w-[380px] lg:w-[460px] xl:w-[500px] aspect-[1221/1289] opacity-80 md:opacity-95 lg:opacity-100 transition-opacity [mask-image:linear-gradient(to_bottom,black_84%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_84%,transparent_100%)]">
+        <div className="relative w-[320px] md:w-[460px] lg:w-[460px] xl:w-[500px] aspect-[1221/1289] opacity-80 md:opacity-95 lg:opacity-100 transition-opacity [mask-image:linear-gradient(to_bottom,black_84%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_84%,transparent_100%)]">
           <Image
             src="/Professional_Portrait_Cutout.png"
             alt="Rounak Kumar — Full-Stack Developer portrait"
